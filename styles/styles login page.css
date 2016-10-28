@@ -1,7 +1,13 @@
+html{
+    background-color: burlywood;
+}
+body{
+text-align: center;
+}
 h1{
     text-align: center;
     color: green;
 }
 table{
-    align: center;
+
 }
