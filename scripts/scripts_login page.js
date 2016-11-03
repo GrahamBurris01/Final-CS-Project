@@ -2,27 +2,37 @@
 /**
  * Created by hamwa on 11/2/2016.
  */
-var Name;
-var Username;
-var Password;
+
 
 var UsernameLogin;
 var PasswordLogin;
-function SaveUsernameAndPassword() {
-    document.getElementById("newName").innerHTML = Name;
-    document.getElementById("newUsername").innerHTML = Username;
-    document.getElementById("newPassword").innerHTML = Password;
 
-    localStorage.setItem(Password, Username);
+var SavedName = "SavedName";
+var SavedUsername = "SavedUsername";
+var SavedPassword = "SavedPassword";
+
+function SaveUsernameAndPassword() {
+    var Name = document.getElementById("newName").value;
+    var Username = document.getElementById("newUsername").value;
+    var Password = document.getElementById("newPassword").value;
+    alert(Password);
+
+    localStorage.setItem('SavedName',Name);
+    localStorage.setItem('SavedUsername',Username);
+    localStorage.setItem('SavedPassword',Password);
 
 window.location= "login page.html";
 }
 function Login(){
-document.getElementById("usernameTxt").innerHTML = UsernameLogin;
-document.getElementById("passwordTxt").innerHTML = PasswordLogin;
+    alert(localStorage.getItem(SavedName));
+    alert(localStorage.getItem(SavedUsername));
+alert(localStorage.getItem(SavedPassword));
 
-if(localStorage.getItem(PasswordLogin,Username)) {
-    alert(Username)
+document.getElementById("passwordTxt").value = PasswordLogin;
 
+if(localStorage.getItem('SavedUsername').value = document.getElementById("usernameTxt").value) {
+
+    alert('hi');
+window.location = "game page.html";
 }
 }
