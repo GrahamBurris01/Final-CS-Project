@@ -10,4 +10,9 @@ function ShowHelp(){
 }
 function ClearHelp(){
     document.getElementById("helpOutput").innerHTML='';
+
+    document.getElementById('faceDownCard1').src = '2_of_clubs.png';
 }
+
+
+

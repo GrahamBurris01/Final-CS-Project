@@ -11,10 +11,19 @@ var SavedName = "SavedName";
 var SavedUsername = "SavedUsername";
 var SavedPassword = "SavedPassword";
 
+var SavedUsernameAndPassword;
+var InputUsernameAndPassword;
+
 function SaveUsernameAndPassword() {
     var Name = document.getElementById("newName").value;
     var Username = document.getElementById("newUsername").value;
     var Password = document.getElementById("newPassword").value;
+
+
+    var
+
+
+
     alert(Password);
 
     localStorage.setItem('SavedName',Name);
@@ -30,9 +39,14 @@ alert(localStorage.getItem(SavedPassword));
 
 document.getElementById("passwordTxt").value = PasswordLogin;
 
-if(localStorage.getItem('SavedUsername').value = document.getElementById("usernameTxt").value) {
+  SavedUsernameAndPassword = localStorage.getItem('SavedUsername').value + localStorage.getItem('SavedPassword');
+    InputUsernameAndPassword = document.getElementById("usernameTxt").value + document.getElementById("passwordTxt");
+
+    if(SavedUsernameAndPassword = InputUsernameAndPassword) {
 
     alert('hi');
 window.location = "game page.html";
-}
+}else{
+        document.getElementById('divLoginError').innerHTML = 'wrong username or password'
+    }
 }
