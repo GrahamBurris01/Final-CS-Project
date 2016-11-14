@@ -32,10 +32,10 @@ function FlipImage1(){
     alert(TimesFlipped);
 
     if(TimesFlipped > 2){
-        document.getElementById("image1").src = CARD0;
-        document.getElementById("image2").src = CARD0;
-        document.getElementById("image3").src = CARD0;
-        document.getElementById("image4").src = CARD0;
+        $("image1").src = CARD0;
+        $("image2").src = CARD0;
+        $("image3").src = CARD0;
+        $("image4").src = CARD0;
     }
 }
 
@@ -44,10 +44,10 @@ function FlipImage2(){
     TimesFlipped ++;
 
     if(TimesFlipped > 2){
-        document.getElementById("image1").src = CARD0;
-        document.getElementById("image2").src = CARD0;
-        document.getElementById("image3").src = CARD0;
-        document.getElementById("image4").src = CARD0;
+        $("image1").src = CARD0;
+        $("image2").src = CARD0;
+        $("image3").src = CARD0;
+        $("image4").src = CARD0;
     }
 
     if(TimesFlipped = 2) setTimeout()
@@ -57,10 +57,10 @@ function FlipImage3(){
     TimesFlipped ++;
 
     if(TimesFlipped > 2){
-        document.getElementById("image1").src = CARD0;
-        document.getElementById("image2").src = CARD0;
-        document.getElementById("image3").src = CARD0;
-        document.getElementById("image4").src = CARD0;
+        $("image1").src = CARD0;
+        $("image2").src = CARD0;
+        $("image3").src = CARD0;
+        $("image4").src = CARD0;
     }
 }
 function FlipImage4(){

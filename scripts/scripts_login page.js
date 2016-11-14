@@ -2,51 +2,28 @@
 /**
  * Created by hamwa on 11/2/2016.
  */
-
-
-var UsernameLogin;
-var PasswordLogin;
-
-var SavedName = "SavedName";
-var SavedUsername = "SavedUsername";
-var SavedPassword = "SavedPassword";
-
-var SavedUsernameAndPassword;
-var InputUsernameAndPassword;
-
-function SaveUsernameAndPassword() {
-    var Name = document.getElementById("newName").value;
-    var Username = document.getElementById("newUsername").value;
-    var Password = document.getElementById("newPassword").value;
-
-
-    var
+var name = $('newName').value;
+var Username = $('newUsername').value;
+var Password = $('newPassword').value;
 
 
 
-    alert(Password);
-
-    localStorage.setItem('SavedName',Name);
-    localStorage.setItem('SavedUsername',Username);
-    localStorage.setItem('SavedPassword',Password);
-
-window.location= "login page.html";
+function SaveNewUser(){
+localStorage.setItem('usernameLocal',Username);
+localStorage.setItem('passwordLocal',Password);
+alert(localStorage.getItem(Password));
+    window.location.href = 'account conformation page.html';
 }
+
 function Login(){
-    alert(localStorage.getItem(SavedName));
-    alert(localStorage.getItem(SavedUsername));
-alert(localStorage.getItem(SavedPassword));
+    var UsernameInput = $('usernameTxt').value;
+    var PasswordInput = $('passwordTxt').value;
+alert(PasswordInput);
+    alert(localStorage.getItem('passwordLocal'));
 
-document.getElementById("passwordTxt").value = PasswordLogin;
-
-  SavedUsernameAndPassword = localStorage.getItem('SavedUsername').value + localStorage.getItem('SavedPassword');
-    InputUsernameAndPassword = document.getElementById("usernameTxt").value + document.getElementById("passwordTxt");
-
-    if(SavedUsernameAndPassword = InputUsernameAndPassword) {
-
-    alert('hi');
-window.location = "game page.html";
-}else{
-        document.getElementById('divLoginError').innerHTML = 'wrong username or password'
+    if(localStorage.getItem('usernameLocal') == UsernameInput
+    && localStorage.getItem('passwordLocal') == PasswordInput){
+        alert('hi');
+        window.location.href = 'game page.html';
     }
 }
