@@ -5,26 +5,27 @@ function $(id){
     return document.getElementById(id);
 }
 
-var Clicks = 1;
-
+var Time = 60*10;
+setInterval(TimeMinus, 1000);
 function ClickCounter(){
-    Clicks++;
-    $('outputGame').innerHTML = Clicks;
-
-        setInterval(ClickReset, 10000)
-
+   Time = 60*10;
 }
-function ClickReset(){
-    if(Clicks > 0) {
-        Clicks--;
-        $('outputGame').innerHTML = Clicks;
+function TimeMinus(){
+    if(Time > 0) {
+        Time--;
+
+        SetLogout()
+    }
+    if(Time < 60){
+        $('outputGame').innerHTML = Time;
     }
 }
-if(Clicks == 0) {
-    
-
-        window.location.href =  'login page.html';
+function SetLogout(){
+    if(1 > Time) {
 
 
+        window.location.href = 'login page.html';
+    }
 }
+
 
