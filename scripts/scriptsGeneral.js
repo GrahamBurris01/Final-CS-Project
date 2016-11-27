@@ -28,4 +28,16 @@ function SetLogout(){
     }
 }
 
+function RandomInt(low,high){
+    return Math.floor(Math.random()*(high-low+1))+low;
+}
+
+function RandomOneOf(list)
+{
+    var randomIndex;
+
+    randomIndex = RandomInt(0, list.length-1);
+
+    return list[randomIndex];
+}
 
