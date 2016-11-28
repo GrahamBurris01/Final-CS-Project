@@ -35,9 +35,10 @@ function RandomInt(low,high){
 function RandomOneOf(list)
 {
     var randomIndex;
-
-    randomIndex = RandomInt(0, list.length-1);
-
+    randomIndex = RandomInt(0,list.length-1 );
+    alert(randomIndex);
     return list[randomIndex];
+
+
 }
 
