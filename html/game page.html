@@ -11,9 +11,11 @@
 <h1>Matching Game</h1><div id = 'outputGame'></div>
 <body>
 <input type="button" value="click for help" onclick="ShowHelp()"><input type="button" value="clearHelp" onclick="ClearHelp()">
+                                      <div id="gameAdvice"></div>                <input type="button" value="click here for game advice!" onclick="GameAdvice()">
 <p>
     <div id="helpOutput"></div><br>
-<input type = 'button' onclick="CreateGame()" value="New Game">
+<input type = 'button' onclick="CreateGame()" value="New Game"><input type="button" value="Check Match" onclick="CheckMatch()"> <input type = 'button' onclick='Achievement()' value="Click if you have gotten a match">
+<div id = 'achievement'></div>
 </p>
 <table align="center">
     <tr><td><img src="../Images2/red_joker.jpg" onclick="FlipImage1()" id="image1"  height="225" width="155"/></td>
@@ -26,15 +28,15 @@
         <td><img src="../Images2/red_joker.jpg" onclick="FlipImage7()" id="image7" height="225" width="155"/></td>
         <td><img src="../Images2/red_joker.jpg" onclick="FlipImage8()" id="image8" height="225" width="155"/></td></tr>
 
-    <tr><td><img src="../Images2/red_joker.jpg" id="image9" height="225" width="155"/></td>
-        <td><img src="../Images2/red_joker.jpg" id="image10" height="225" width="155"/></td>
-        <td><img src="../Images2/red_joker.jpg" id="image11" height="225" width="155"/></td>
-        <td><img src="../Images2/red_joker.jpg" id="image12" height="225" width="155"/></td></tr>
+    <tr><td><img src="../Images2/red_joker.jpg" onclick="FlipImage9()" id="image9" height="225" width="155"/></td>
+        <td><img src="../Images2/red_joker.jpg" onclick="FlipImage10()" id="image10" height="225" width="155"/></td>
+        <td><img src="../Images2/red_joker.jpg" onclick="FlipImage11()" id="image11" height="225" width="155"/></td>
+        <td><img src="../Images2/red_joker.jpg" onclick="FlipImage12()" id="image12" height="225" width="155"/></td></tr>
 
-    <tr><td><img src="../Images2/red_joker.jpg" id="image13" height="225" width="155"/></td>
-        <td><img src="../Images2/red_joker.jpg" id="image14" height="225" width="155"/></td>
-        <td><img src="../Images2/red_joker.jpg" id="image15" height="225" width="155"/></td>
-        <td><img src="../Images2/red_joker.jpg" id="image16" height="225" width="155"/></td></tr>
+    <tr><td><img src="../Images2/red_joker.jpg" onclick="FlipImage13()" id="image13" height="225" width="155"/></td>
+        <td><img src="../Images2/red_joker.jpg" onclick="FlipImage14()" id="image14" height="225" width="155"/></td>
+        <td><img src="../Images2/red_joker.jpg" onclick="FlipImage15()" id="image15" height="225" width="155"/></td>
+        <td><img src="../Images2/red_joker.jpg" onclick="FlipImage16()" id="image16" height="225" width="155"/></td></tr>
 </table>
 </body>
 </html>
